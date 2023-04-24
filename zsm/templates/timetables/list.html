@@ -6,12 +6,14 @@
 {% block content %}
 <main>
     
-    <form action="{% url 'search' %}" method="get " class="refister-form-container">
+    <form action="{% url 'search' %}" method="post" class="refister-form-container">
         <h1 class="form-title">Найти расписание</h1>            
         <div class="form-fields">
-            <div class="form-class">
-                <input type="search" placeholder="Класс" name="q" size="39.5">
-            </div>
+                    <select size="3" multiple name="hero[]">
+                     {% for a in class_list %}
+                     <option value="{{a.name}}">{{a.name}}</option>
+                     {% endfor %}
+                    </select>
             <div class="form-date">
                 <input type="date" name="Date" size="39.5" id="dateToday">
             </div>
