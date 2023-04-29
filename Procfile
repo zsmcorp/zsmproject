@@ -1,1 +1,1 @@
-web: gunicorn zsm.wsgi --log-file -
+web: python3 bagend.py
