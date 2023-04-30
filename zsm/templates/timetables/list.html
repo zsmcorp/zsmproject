@@ -5,7 +5,7 @@
 
 {% block content %}
 <main>
-    
+    {% csrf_token %}
     <form action="{% url 'search' %}" method="post" class="refister-form-container">
         <h1 class="form-title">Найти расписание</h1>            
         <div class="form-fields">
