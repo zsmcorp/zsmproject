@@ -1,5 +1,6 @@
 
 echo " BUILD START"
+pipenv shell
 pip install -r requirements.txt
 pip install --upgrade pip
 pip install --upgrade setuptools
