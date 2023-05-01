@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+<h1>{{title}}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registration</button>
+</form>
+{% endblock %} 
