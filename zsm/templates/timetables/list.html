@@ -10,7 +10,7 @@
         <h1 class="form-title">Найти расписание</h1>            
         <div class="form-fields">
                     <select size="3" multiple name="hero[]">
-                     {% for a in class_list %}
+                     {% for a in tt_l %}
                      <option value="{{a.name}}">{{a.name}}</option>
                      {% endfor %}
                     </select>
