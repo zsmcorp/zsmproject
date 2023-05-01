@@ -24,15 +24,3 @@ def detail(request, tt_slug):
 
     return render(request, 'timetables/detail.html', {'timetables_list': timetables_list, 'class_id': class_id})
 
-class Search(ListView):
-    
-    paginate_by = 1
-
-    def get_queryset(self):
-        return  Timetable.objects.filter(class_init__icontains=self.request.GET.get('q')) 
-    
-    def get_context_data(self, *args, **kwargs): 
-        context = super().get_context_data(*args, **kwargs)
-        context["q"] = self.request.GET.get("q")
-        return context
- 
